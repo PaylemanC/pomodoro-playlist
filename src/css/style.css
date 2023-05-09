@@ -75,6 +75,8 @@ nav ul {
 .banner {
     height: 16rem;
     width: 100%;
+    max-width: 670px;
+    margin-right: 0;
     background: url("../assets/images/banner.jpg") center/cover no-repeat; 
 }
 
@@ -91,9 +93,40 @@ h2 {
     font-family: 'Pacifico', cursive;
 }
 
+#playlist__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    margin: 24px 0;
+}
+
+.playlist__content {
+    border: 1px solid var(--double-orange);
+    padding: 8px;
+    background-color: var(--soft-white)
+}
+
+.playlist__video img {
+    width: 100%;
+}
+
+.playlist__title h3 {
+    margin-top: 8px;
+}
+
+.playlist__title a {
+    font-size: 1.1rem;
+    text-decoration: none;
+    line-height: 1.58rem;
+    color: var(--brown);
+    font-weight: normal;
+}
+
 .playlist__complete {
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
 }
 
 .playlist__complete svg {
@@ -116,7 +149,6 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--soft-white);
 }
 
 .pomodoro__content {
