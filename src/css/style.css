@@ -21,6 +21,7 @@ nav {
     padding: 16px;
     border-bottom: 2px solid var(--brown);
     display: flex;
+    background-color: #faf4e9;
 }
 
 nav ul {
@@ -103,6 +104,7 @@ h2 {
     color: var(--double-orange);
     text-decoration: none;
     margin: 0 5px;
+    font-size: 1.059rem;
 }
 
 .playlist__complete-link span {
@@ -114,6 +116,7 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: var(--soft-white);
 }
 
 .pomodoro__content {
@@ -121,6 +124,7 @@ h2 {
     background-color: var(--soft-orange);
     color: var(--grey);
     padding-top: 8px;
+    line-height: 1.5rem;
 }
 
 .pomodoro__content h2 {
@@ -162,4 +166,69 @@ footer li {
 footer a {
     text-decoration: none;
     color: var(--soft-letters);
+}
+
+
+@media screen and (min-width: 656px) {
+    .desktop-menu {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+    }
+
+    .logo-youtube {
+        margin-left: 8px;
+    }
+
+    nav {
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+
+    nav a {
+        text-decoration: none;
+        font-family: 'Pacifico', cursive;
+        color: var(--grey);
+        font-size: 1.25rem;
+    }
+    nav a::after {
+        content: "";
+        display: block;
+        height: 3px;
+        background-color: currentColor;
+        transform: scale(0,1);
+        transform-origin: center;
+        transition: transform .4s;
+    }
+    nav a:hover::after {
+        transform: scale(1,1);
+    }
+    
+    #general {
+        display: flex;
+    }
+
+    .banner {
+        height: auto;
+        position: relative;
+        clip-path: polygon(19% 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .pomodoro__content {
+        padding: 18px 28px 32px;
+    }
+
+    .pomodoro__content p {
+        padding: 0 16px;
+    }
+
+    footer ul {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 1099px) {
+    .banner {
+        background: url("../assets/images/bannerL.jpeg") center/cover no-repeat; 
+    }
 }
