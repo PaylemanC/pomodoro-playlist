@@ -20,19 +20,20 @@ async function fetchData(urlApi) {
         const videos = await fetchData(API);
         let view = `
         ${videos.items.map(video => `
-        <a href="https://youtube.com/watch?v=${video.snippet.resourceId.videoId}" target="_blank">
             <div class="playlist__content">
                 <div class="playlist__video">
-                    <img src="${video.snippet.thumbnails.high.url}" alt="${video.snippet.description}" class="">
+                    <a href="https://youtube.com/watch?v=${video.snippet.resourceId.videoId}" target="_blank">
+                        <img src="${video.snippet.thumbnails.high.url}" alt="${video.snippet.title}" class="">
+                    </a>
                 </div>
-                <div>
+                <div class="playlist__title">
                     <h3>
-                        <span></span>
-                        ${video.snippet.title}
+                        <a href="https://youtube.com/watch?v=${video.snippet.resourceId.videoId}" target="_blank">
+                            ${video.snippet.title}
+                        </a>
                     </h3>
                 </div>
             </div>
-        </a>
         `).slice(0, 8).join('')}`;
 
         content.innerHTML = view;
