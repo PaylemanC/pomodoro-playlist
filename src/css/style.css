@@ -1,0 +1,165 @@
+* {
+    margin: 0 auto; 
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --brown: #1c1214;
+    --soft-orange: #F2B872;
+    --double-orange: #b74b00;
+    --grey: #3C3846;
+    --soft-white: #FDE9CC;
+    --soft-letters: #ffdbb7;
+}
+
+nav {
+    padding: 16px;
+    border-bottom: 2px solid var(--brown);
+    display: flex;
+}
+
+nav ul {
+    list-style: none;
+}
+
+.logo-youtube {
+    width: 48px;
+    height: auto;
+}
+
+.desktop-menu {
+    display: none;
+}
+
+.general__container, #playlist, .pomodoro__content, footer {
+    padding: 16px 24px;
+}
+
+.general__container {
+    max-width: 450px;
+}
+
+.general__content h1 {
+    font-family: 'Pacifico', cursive;
+    line-height: 45px;
+    letter-spacing: 2px;
+    font-size: 2.25rem;
+    margin: 16px 0;
+    color: var(--grey);
+}
+
+.general__content .subtitle {
+    font-size: 1.5rem;
+}
+ 
+.general__content .description {
+    opacity: 80%;
+    font-size: 1rem;
+    color: black;
+    margin: 26px 0;
+    line-height: 26px;
+}
+
+.general__content .general__more-info {
+    color: var(--grey);
+    font-style: italic;
+    font-size: 0.92rem;
+}
+
+.banner {
+    height: 16rem;
+    width: 100%;
+    background: url("../assets/images/banner.jpg") center/cover no-repeat; 
+}
+
+.description span {
+    font-weight: bold;
+    font-family: 'Pacifico', cursive;
+    color: var(--double-orange); 
+}
+
+h2 {
+    font-size: 1.58rem;
+    margin: 16px 0;
+    color: var(--grey);
+    font-family: 'Pacifico', cursive;
+}
+
+.playlist__complete {
+    display: flex;
+    align-items: center;
+}
+
+.playlist__complete svg {
+    margin: 0;
+}
+
+.playlist__complete-link {
+    color: var(--double-orange);
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.playlist__complete-link span {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#pomodoro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pomodoro__content {
+    height: auto;
+    background-color: var(--soft-orange);
+    color: var(--grey);
+    padding-top: 8px;
+}
+
+.pomodoro__content h2 {
+    font-size: 1.3rem;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+.pomodoro__content span {
+    font-style: italic;
+    display: block;
+    text-align: center;
+    margin-top: 12px;
+}
+
+#pomodoro img {
+    margin: 24px 0;
+    width: 125px;
+    height: 125px;
+}
+
+footer {
+    background-color: var(--brown);
+    color: white;
+    height: auto;
+    min-width: 150px;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer li {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--soft-letters);
+}
